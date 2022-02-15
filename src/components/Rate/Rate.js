@@ -5,18 +5,15 @@ function Rate() {
   const [course, setCourse] = useState([]);
 
   async function fetchCourse() {
-    const response = await fetch('https://api.Rate.ua/p24api/pubinfo?json&exchange&coursid=5');
+    const response = await fetch(
+      'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5',
+    );
     return response.ok ? await response.json() : console.log('error');
   }
 
   useEffect(() => {
-    fetchCourse().then(response =>
-      // console.log(response),
-      setCourse(response),
-    );
+    fetchCourse().then(response => setCourse(response));
   }, []);
-
-  console.log(s.table);
 
   return (
     <>
