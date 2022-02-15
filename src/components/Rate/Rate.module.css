@@ -1,0 +1,59 @@
+.Table {
+  font-style: normal;
+  height: 347px;
+  width: 348px;
+  border-radius: 30px;
+  background-color: #4a56e2;
+  color: #fff;
+  font-size: 18px;
+  /* padding-left: 30px;
+  padding-right: 30px; */
+  /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -7.46%, rgba(255, 255, 255, 0) 100%); */
+  list-style-type: none;
+  padding: 0;
+}
+
+.TableHead {
+  box-sizing: border-box;
+  font-family: 'Circe', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  width: 100% / 3;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding-top: 17px;
+  padding-bottom: 17px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.TableBody {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* .TableData {
+  align: center;
+} */
+
+.TableRow {
+  font-family: 'Circe', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
