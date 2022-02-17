@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom';
 import Media from 'react-media';
 import { MdHome, MdTimeline, MdAttachMoney } from 'react-icons/md';
 
-import s from './Menu.module.css';
+import s from './Navigation.module.css';
 
-function Menu() {
+function Navigation() {
+  let isLinkActive = ({ isActive }) => (isActive ? s.activeIcon : s.icon);
+
   return (
     <div>
       <Media
@@ -22,18 +24,18 @@ function Menu() {
                 <div className={s.container}>
                   <ul className={s.list}>
                     <li className={s.item}>
-                      <NavLink to="/">
-                        <MdHome className={s.icon} />
+                      <NavLink to="/home" className={isLinkActive}>
+                        <MdHome />
                       </NavLink>
                     </li>
                     <li className={s.item}>
-                      <NavLink to="/statistic">
-                        <MdTimeline className={s.icon} />
+                      <NavLink to="/diagram" className={isLinkActive}>
+                        <MdTimeline />
                       </NavLink>
                     </li>
                     <li className={s.item}>
-                      <NavLink to="/rate">
-                        <MdAttachMoney className={s.icon} />
+                      <NavLink to="/rate" className={isLinkActive}>
+                        <MdAttachMoney />
                       </NavLink>
                     </li>
                   </ul>
@@ -45,14 +47,14 @@ function Menu() {
                 <div className={s.container}>
                   <ul className={s.list}>
                     <li className={s.item}>
-                      <NavLink to="/">
-                        <MdHome className={s.icon} />
+                      <NavLink to="/home" className={isLinkActive}>
+                        <MdHome />
                         <span className={s.itemTitle}>Главная</span>
                       </NavLink>
                     </li>
                     <li className={s.item}>
-                      <NavLink to="/statistic">
-                        <MdTimeline className={s.icon} />
+                      <NavLink to="/diagram" className={isLinkActive}>
+                        <MdTimeline />
                         <span className={s.itemTitle}>Статистика</span>
                       </NavLink>
                     </li>
@@ -65,14 +67,14 @@ function Menu() {
                 <div className={s.container}>
                   <ul className={s.list}>
                     <li className={s.item}>
-                      <NavLink to="/">
-                        <MdHome className={s.icon} />
+                      <NavLink to="/home" className={isLinkActive}>
+                        <MdHome />
                         <span className={s.itemTitle}>Главная</span>
                       </NavLink>
                     </li>
                     <li className={s.item}>
-                      <NavLink to="/statistic">
-                        <MdTimeline className={s.icon} />
+                      <NavLink to="/diagram" className={isLinkActive}>
+                        <MdTimeline />
                         <span className={s.itemTitle}>Статистика</span>
                       </NavLink>
                     </li>
@@ -87,4 +89,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Navigation;

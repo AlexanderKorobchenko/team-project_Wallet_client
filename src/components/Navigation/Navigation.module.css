@@ -18,10 +18,28 @@
   color: white;
   background-color: #6e78e8;
   border-radius: 8px;
-  padding: 8px;
   width: 23px;
   height: 23px;
   margin: 3px;
+}
+
+.activeIcon {
+  color: white;
+  background-color: #4a56e2;
+  border-radius: 8px;
+  width: 23px;
+  height: 23px;
+  margin: 3px;
+}
+
+.icon {
+  /* color: white;
+  background-color: #6e78e8;
+  border-radius: 8px; */
+  /* padding: 8px;
+  width: 23px;
+  height: 23px;
+  margin: 3px; */
 }
 
 .item {
@@ -36,7 +54,7 @@
   display: none;
 } */
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .list {
     flex-direction: column;
     /* height: 94px; */

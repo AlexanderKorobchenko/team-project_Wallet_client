@@ -2,11 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Container from './components/Container/Container';
-import Main from './components/Main';
-// import LeftBar from './components/LeftBar';
-import Menu from './components/Menu';
-import Balance from './components/Balance';
+import Body from './components/Body';
 import Rate from './components/Rate';
+import Navigation from './components/Navigation';
+import NotFoundView from './views/NotFoundView';
 
 function App() {
   return (
@@ -18,20 +17,49 @@ function App() {
             path="/"
             element={
               <>
-                <Menu />
-                <Balance />
-                <Main />
+                <Body />
+                <h2>Start</h2>
               </>
             }
           />
 
           <Route
-            exact
+            path="/home"
+            element={
+              <>
+                <Body />
+                <h2>Home</h2>
+              </>
+            }
+          />
+
+          <Route
+            path="/diagram"
+            element={
+              <>
+                <Body />
+                <h2>Diagram</h2>
+              </>
+            }
+          />
+
+          <Route
             path="/rate"
             element={
               <>
-                <Menu />
+                <Navigation />
                 <Rate />
+                <h2>Rate</h2>
+              </>
+            }
+          />
+
+          <Route
+            path="*"
+            element={
+              <>
+                <Navigation />
+                <NotFoundView />
               </>
             }
           />
@@ -42,3 +70,26 @@ function App() {
 }
 
 export default App;
+
+// <Router>
+//   <Container>
+//     <Routes>
+//       <Route exact path="/" element={
+//           <>
+//             <Navigation />
+//             {/* <Balance />
+//             <Main /> */}
+//           </>
+//         }
+//       />
+
+//       <Route exact path="/rate" element={
+//           <>
+//             <Navigation />
+//             {/* <Rate /> */}
+//           </>
+//         }
+//       />
+//     </Routes>
+//   </Container>
+// </Router>

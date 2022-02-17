@@ -1,16 +1,48 @@
-import Menu from '../Menu';
+import Navigation from '../Navigation';
 import Balance from '../Balance';
 import Rate from '../Rate';
+
+import React, { Fragment } from 'react';
+import { NavLink } from 'react-router-dom';
+import Media from 'react-media';
+import { MdHome, MdTimeline, MdAttachMoney } from 'react-icons/md';
 
 import s from './LeftBar.module.css';
 
 function LeftBar(props) {
   return (
-    <div className={s.Leftbar}>
-      <Menu />
-      <Balance />
-      <Rate />
-    </div>
+    <Media
+      queries={{
+        small: '(max-width: 767px)',
+        medium: '(min-width: 768px) and (max-width: 1279px)',
+        large: '(min-width: 1280px)',
+      }}
+    >
+      {matches => (
+        <Fragment>
+          {matches.small && (
+            <>
+              <Navigation />
+              <Balance />
+            </>
+          )}
+          {matches.medium && (
+            <>
+              <Navigation />
+              <Balance />
+              <Rate />
+            </>
+          )}
+          {matches.large && (
+            <>
+              <Navigation />
+              <Balance />
+              <Rate />
+            </>
+          )}
+        </Fragment>
+      )}
+    </Media>
   );
 }
 
