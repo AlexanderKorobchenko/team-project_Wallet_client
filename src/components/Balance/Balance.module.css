@@ -10,7 +10,7 @@
 
 .BalanceName {
   color: #a6a6a6;
-  font-family: Circe;
+  font-family: 'Circe', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -20,7 +20,7 @@
 
 .BalanceValue {
   color: #000000;
-  font-family: Segoeui;
+  font-family: 'Segoeui', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
