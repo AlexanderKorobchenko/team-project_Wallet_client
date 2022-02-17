@@ -18,17 +18,17 @@ function Rate() {
   return (
     <>
       {course && (
-        <ul className={s.Table}>
-          <li className={s.TableHead}>
-            <span className={s.TableData}>Валюта</span>
-            <span className={s.TableData}>Покупка</span>
-            <span className={s.TableData}>Продажа</span>
+        <ul className={s.Rate}>
+          <li className={s.RateHead}>
+            <span className={s.RateData}>Валюта</span>
+            <span className={s.RateData}>Покупка</span>
+            <span className={s.RateData}>Продажа</span>
           </li>
           {course.map(cour => (
-            <li key={cour.ccy} className={s.TableRow}>
-              <span className={s.TableData}>{cour.ccy}</span>
-              <span className={s.TableData}>{Number(cour.buy).toFixed(2)}</span>
-              <span className={s.TableData}>{Number(cour.sale).toFixed(2)}</span>
+            <li key={cour.ccy} className={s.RateRow}>
+              <span className={s.RateData}>{cour.ccy}</span>
+              <span className={s.RateData}>{Number(cour.buy).toFixed(2)}</span>
+              <span className={s.RateData}>{Number(cour.sale).toFixed(2)}</span>
             </li>
           ))}
         </ul>

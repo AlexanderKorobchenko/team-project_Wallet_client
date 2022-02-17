@@ -10,11 +10,6 @@ function Body() {
   return (
     <div className={s.div}>
       <LeftBar />
-      <div>
-        <h1>Main Page</h1>
-      </div>
-      {/* {location.pathname === '/diagram' &&
-      <div>Это диаграмма</div>} */}
     </div>
   );
 }

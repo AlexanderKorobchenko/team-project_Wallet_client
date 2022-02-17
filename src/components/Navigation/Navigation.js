@@ -6,7 +6,7 @@ import { MdHome, MdTimeline, MdAttachMoney } from 'react-icons/md';
 import s from './Navigation.module.css';
 
 function Navigation() {
-  let isLinkActive = ({ isActive }) => (isActive ? s.activeIcon : s.icon);
+  let isLinkActive = ({ isActive }) => (isActive ? s.activeLink : s.link);
 
   return (
     <div>
@@ -25,17 +25,17 @@ function Navigation() {
                   <ul className={s.list}>
                     <li className={s.item}>
                       <NavLink to="/home" className={isLinkActive}>
-                        <MdHome />
+                        <MdHome className={s.svg} />
                       </NavLink>
                     </li>
                     <li className={s.item}>
                       <NavLink to="/diagram" className={isLinkActive}>
-                        <MdTimeline />
+                        <MdTimeline className={s.svg} />
                       </NavLink>
                     </li>
                     <li className={s.item}>
                       <NavLink to="/rate" className={isLinkActive}>
-                        <MdAttachMoney />
+                        <MdAttachMoney className={s.svg} />
                       </NavLink>
                     </li>
                   </ul>
@@ -48,14 +48,14 @@ function Navigation() {
                   <ul className={s.list}>
                     <li className={s.item}>
                       <NavLink to="/home" className={isLinkActive}>
-                        <MdHome />
-                        <span className={s.itemTitle}>Главная</span>
+                        <MdHome className={s.svg} />
+                        <div className={s.itemTitle}>Главная</div>
                       </NavLink>
                     </li>
                     <li className={s.item}>
                       <NavLink to="/diagram" className={isLinkActive}>
-                        <MdTimeline />
-                        <span className={s.itemTitle}>Статистика</span>
+                        <MdTimeline className={s.svg} />
+                        <div className={s.itemTitle}>Статистика</div>
                       </NavLink>
                     </li>
                   </ul>
@@ -68,14 +68,14 @@ function Navigation() {
                   <ul className={s.list}>
                     <li className={s.item}>
                       <NavLink to="/home" className={isLinkActive}>
-                        <MdHome />
-                        <span className={s.itemTitle}>Главная</span>
+                        <MdHome className={s.svg} />
+                        <div className={s.itemTitle}>Главная</div>
                       </NavLink>
                     </li>
                     <li className={s.item}>
                       <NavLink to="/diagram" className={isLinkActive}>
-                        <MdTimeline />
-                        <span className={s.itemTitle}>Статистика</span>
+                        <MdTimeline className={s.svg} />
+                        <div className={s.itemTitle}>Статистика</div>
                       </NavLink>
                     </li>
                   </ul>

@@ -1,16 +1,25 @@
-.div {
-  background-color: #e7eaf2; /* переместить */
-  min-width: 280px;
-  max-width: 1110px;
+.container {
+  min-width: 320px;
+  max-width: 1280px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .div {
-    display: flex;
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 688px;
+    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  .container {
+    width: 1110px;
+    margin: 0 auto;
+    padding-left: 85px;
+    padding-right: 85px;
+  }
 }

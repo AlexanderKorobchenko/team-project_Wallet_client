@@ -27,11 +27,13 @@ function LeftBar(props) {
             </>
           )}
           {matches.medium && (
-            <>
-              <Navigation />
-              <Balance />
+            <div className={s.Leftbar}>
+              <div>
+                <Navigation />
+                <Balance />
+              </div>
               <Rate />
-            </>
+            </div>
           )}
           {matches.large && (
             <>

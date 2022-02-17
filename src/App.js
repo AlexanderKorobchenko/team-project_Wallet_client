@@ -7,6 +7,8 @@ import Rate from './components/Rate';
 import Navigation from './components/Navigation';
 import NotFoundView from './views/NotFoundView';
 
+// import s from "./App.module.css";
+
 function App() {
   return (
     <Router>

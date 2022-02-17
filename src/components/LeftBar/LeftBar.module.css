@@ -1,2 +1,7 @@
-.Leftbar {
+@media screen and (min-width: 768px) {
+  .Leftbar {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
 }
